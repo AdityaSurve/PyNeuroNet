@@ -25,7 +25,7 @@ cnts = cnts[0] if len(cnts) == 2 else cnts[1]
 for c in cnts:
     area = cv2.contourArea(c)
     if area > 1000:
-        x, y, w, h = cv2.boundingRect(c)
+        x, y, w, h = cv2.boundingRect(c)    
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
 plt.imshow(img)
 plt.show()
